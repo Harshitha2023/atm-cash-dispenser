@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cash Dispenser</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>Cash Dispenser</h1>
+
+<div id="initializeContainer">
+    <h2>Initialize Cash Notes</h2>
+    <form id="initializeForm">
+        <label for="twenty">Number of $20 Notes:</label>
+        <input type="number" id="twenty" name="twenty" min="0" required>
+        <br>
+        <label for="fifty">Number of $50 Notes:</label>
+        <input type="number" id="fifty" name="fifty" min="0" required>
+        <br>
+        <button type="submit">Initialize</button>
+    </form>
+    <div id="message" class="message"></div>
+</div>
+
+<div id="cashNotesContainer">
+    <h2>Available Cash Notes</h2>
+    <table id="cashNotesTable">
+        <thead>
+        <tr>
+            <th>Denomination</th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<div id="addContainer">
+    <h2>Add Cash</h2>
+    <label for="addDenomination">Denomination:</label>
+    <select id="addDenomination">
+        <option value="20">$20</option>
+        <option value="50">$50</option>
+    </select>
+    <br>
+    <label for="addQuantity">Quantity:</label>
+    <input type="number" id="addQuantity" min="1" required>
+    <br>
+    <button id="addButton">Add</button>
+</div>
+
+<div id="removeContainer">
+    <h2>Remove Cash</h2>
+    <label for="removeDenomination">Denomination:</label>
+    <select id="removeDenomination">
+        <option value="20">$20</option>
+        <option value="50">$50</option>
+    </select>
+    <br>
+    <label for="removeQuantity">Quantity:</label>
+    <input type="number" id="removeQuantity" min="1" required>
+    <br>
+    <button id="removeButton">Remove</button>
+</div>
+
+<div id="withdrawContainer">
+    <h2>Withdraw Cash</h2>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" min="20" step="10" required>
+    <button id="withdrawButton">Withdraw</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
